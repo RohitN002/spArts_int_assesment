@@ -1,7 +1,7 @@
 import axios from 'axios';
 
-const API_URL = 'http://3.223.98.72:1337/api/students';
-
+const API_URL = import.meta.env.VITE_API_URL
+console.log(API_URL)
 export const fetchStudents = async () => {
   try {
     const response = await axios.get(API_URL
